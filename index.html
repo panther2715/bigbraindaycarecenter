@@ -67,75 +67,119 @@
  
 <center><h1>Our Kids</h1></center>
 
- <div class="container">
-  <style>
-  
-  *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+ <style>
+	body {
+		font-family: Helvetica, sans-serif;
+		padding: 5%;
+		text-align: center;
+		font-size: 50;
+	}
+	
+	/* Styling the area of the slides */
+	
+	#slideshow {
+		overflow: hidden;
+		height: 510px;
+		width: 928px;
+		margin: 0 auto;
+        
+	}
+	
+	/* Style each of the sides
+	with a fixed width and height */
+	
+	.slide {
+		float: left;
+		height: 510px;
+		width: 728px;
+	}
+	
+	/* Add animation to the slides */
+	
+	.slide-wrapper {
+		
+		/* Calculate the total width on the
+	basis of number of slides */
+		width: calc(728px * 4);
+		
+		/* Specify the animation with the
+	duration and speed */
+		animation: slide 10s ease infinite;
+	}
+	
+	/* Set the background color
+	of each of the slides */
+	
+	.slide:nth-child(1) {
+		background: white;
+	}
+	
+	.slide:nth-child(2) {
+		background: white;
+	}
+	
+	.slide:nth-child(3) {
+		background: white;
+	}
+	
+	.slide:nth-child(4) {
+		background: white;
+	}
+	
+	/* Define the animation
+	for the slideshow */
+	
+	@keyframes slide {
+		
+		/* Calculate the margin-left for
+	each of the slides */
+		20% {
+			margin-left: 0px;
+		}
+		40% {
+			margin-left: calc(-728px * 1);
+		}
+		60% {
+			margin-left: calc(-728px * 2);
+		}
+		80% {
+			margin-left: calc(-728px * 3);
+		}
+	}
+	</style>
+</head>
 
- 
-
-/*Basic structure of slider*/
-.container{
-    width: 500px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-     
-}
-
-/*Area of images*/
-.wrapper{
-    width: 100%;
-    display: flex;
-    animation: slide 16s infinite;
-}
-
-img{
-    width: 350px;
-}
-/*Animation activated by keyframes*/
-@keyframes slide{
-    0%{
-        transform: translateX(0);
-    }
-    25%{
-        transform: translateX(0);
-    }
-    30%{
-        transform: translateX(-100%);
-    }
-    50%{
-        transform: translateX(-100%);
-    }
-    55%{
-        transform: translateX(-200%);
-    }
-    75%{
-        transform: translateX(-200%);
-    }
-    80%{
-        transform: translateX(-300%);
-    }
-    100%{
-        transform: translateX(-300%);
-    }
-}
-  </style>
-<!--Area of the images-->
-   <div class="wrapper">
-      <img src="assets/1.jpg" widht:200px>
-      <img src="https://www.foundry.com/sites/default/files/inline-images/Images_003_0.jpg">
-      <img src="https://www.foylefilmfestival.org/sites/default/files/COCO%20main%20image%203.jpg">
-      <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2017%2F11%2Fcoco_c330_56b_pub-pub16n-186_rgb-2000.jpg">
-   </div>
-
-</div>
+<body>
+	
+	<!-- Define the slideshow container -->
+	<div id="slideshow">
+		<div class="slide-wrapper">
+			
+			<!-- Define each of the slides
+		and write the content -->
+			<div class="slide">
+				<h1 class="slide-number">
+					 <img src="assets/1.jpg" style="  border: 5px solid pink
+                     ;">
+				</h1>
+			</div>
+			<div class="slide">
+				<h1 class="slide-number">
+				<img src="assets/6.jpg" style="  border: 5px solid pink;">
+				</h1>
+			</div>
+			<div class="slide">
+				<h1 class="slide-number">
+					<img src="assets/4.jpg" style="  border: 5px solid pink;">
+				</h1>
+			</div>
+			<div class="slide">
+				<h1 class="slide-number">
+				<img src="assets/7.jpg" style="  border: 5px solid pink">
+				</h1>
+			</div>
+		</div>
+	</div>
 
  
 
