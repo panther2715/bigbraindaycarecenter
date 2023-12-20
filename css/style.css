@@ -168,7 +168,7 @@ h6,
 .page-header::after {
     position: absolute;
     content: "";
-    width: 100px;
+    width: 100%;
     height: 10px;
     top: 0;
     left: 0;
@@ -181,7 +181,7 @@ h6,
     height: 19px;
     top: auto;
     bottom: 0;
-    background: url(../img/bg-header-bottom.png) center center repeat-x;
+    background: url(images/bg-header-bottom.png) center center repeat-x;
 }
 
 @media (max-width: 768px) {
@@ -192,8 +192,8 @@ h6,
     
     .header-carousel .owl-carousel-item img {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
     }
 
