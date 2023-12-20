@@ -168,7 +168,7 @@ h6,
 .page-header::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 100px;
     height: 10px;
     top: 0;
     left: 0;
